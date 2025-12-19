@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #2f3542;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* Portfolio Grid – Mobile First */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    padding: 25px;
+    border-radius: 8px;
+    color: white;
+}
+
+.about { background-color: #1e90ff; }
+.skills { background-color: #2ed573; }
+.projects { background-color: #ffa502; }
+.contact { background-color: #ff6b81; }
+
+/* Tablet View */
+@media (min-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #2f3542;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>Hani Patel</h1>
+    <p>Web Developer | IT Student</p>
+    <p>Passionate about building responsive and user-friendly web applications</p>
+</header>
+
+<main class="portfolio-grid">
+
+    <section class="card about">
+        <h2>About Me</h2>
+        <p>
+            I am an IT student with a strong interest in web development.
+            I enjoy learning new technologies and improving my skills by building real-world projects.
+        </p>
+        <p>
+            My focus is on creating clean, responsive, and accessible websites using modern web standards.
+        </p>
+    </section>
+
+    <section class="card skills">
+        <h2>Skills</h2>
+        <p>Frontend Technologies:</p>
+        <p>HTML5, CSS3, JavaScript</p>
+        <p>Concepts:</p>
+        <p>Responsive Design, CSS Grid, Media Queries, Mobile-First Design</p>
+        <p>Tools:</p>
+        <p>VS Code, Git, GitHub</p>
+    </section>
+
+    <section class="card projects">
+        <h2>Projects</h2>
+        <p><strong>Responsive Portfolio Website</strong> – Built using HTML, CSS Grid, and media queries.</p>
+        <p><strong>Landing Page</strong> – Designed a mobile-first landing page with clean UI.</p>
+        <p><strong>Practice Layouts</strong> – Created blog, product grid, and event page layouts.</p>
+    </section>
+
+    <section class="card contact">
+        <h2>Contac
+            </h2>
+        <p>Email: hanisavaliya@gmail.com</p>
+        <p>Location: India</p>
+        <p>Available for internships and learning opportunities</p>
+    </section>
+
+</main>
+
+</body>
+</html>
