@@ -1,0 +1,158 @@
+/* =========================
+   Global Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Body
+========================= */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   Navigation
+========================= */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffe53b;
+  text-decoration: underline;
+}
+
+/* =========================
+   Sections
+========================= */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #764ba2;
+  border-bottom: 3px solid #ff512f;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* =========================
+   Projects
+========================= */
+#projects ul {
+  padding-left: 20px;
+}
+
+#projects ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* =========================
+   Form
+========================= */
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 8px rgba(118, 75, 162, 0.4);
+}
+
+/* =========================
+   Button
+========================= */
+button {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+}
