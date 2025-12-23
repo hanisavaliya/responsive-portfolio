@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Calculator</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            font-family: Verdana, sans-serif;
+        }
+
+        .box {
+            width: 320px;
+            margin: 120px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .clear-btn {
+            background-color: #dc3545;
+        }
+
+        .clear-btn:hover {
+            background-color: #c82333;
+        }
+
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Smart Calculator</h2>
+
+    <input type="number" id="first" placeholder="First Number">
+    <input type="number" id="second" placeholder="Second Number">
+
+    <select id="op">
+        <option value="">Choose Operation</option>
+        <option value="+">Add</option>
+        <option value="-">Subtract</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+    </select>
+
+    <button onclick="runCalculator()">Calculate</button>
+    <button class="clear-btn" onclick="clearAll()">Clear</button>
+
+    <div id="output">Result will appear here</div>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
