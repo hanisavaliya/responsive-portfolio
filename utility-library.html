@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Utility Toolkit</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .container {
+      width: 600px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #4a148c;
+      letter-spacing: 1px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #f3f4ff, #fafbff);
+      border-left: 6px solid #667eea;
+    }
+
+    .label {
+      font-size: 16px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .value {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .blue { background: #42a5f5; }
+    .green { background: #66bb6a; }
+    .orange { background: #ffa726; }
+    .purple { background: #ab47bc; }
+    .red { background: #ef5350; }
+    .teal { background: #26a69a; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>JavaScript Utility Toolkit</h1>
+
+    <div class="item">
+      <span class="label">Uppercase Text</span>
+      <span class="value blue" id="upper"></span>
+    </div>
+
+    <div class="item">
+      <span class="label">Lowercase Text</span>
+      <span class="value green" id="lower"></span>
+    </div>
+
+    <div class="item">
+      <span class="label">Formatted Value</span>
+      <span class="value orange" id="number"></span>
+    </div>
+
+    <div class="item">
+      <span class="label">Email Validation</span>
+      <span class="value purple" id="email"></span>
+    </div>
+
+    <div class="item">
+      <span class="label">Even Number Check</span>
+      <span class="value red" id="even"></span>
+    </div>
+
+    <div class="item">
+      <span class="label">Scope Result</span>
+      <span class="value teal" id="scope"></span>
+    </div>
+  </div>
+
+  <script>
+    function toUpperCase(str) {
+      return str.toUpperCase();
+    }
+
+    const toLowerCase = function (str) {
+      return str.toLowerCase();
+    };
+
+    const formatNumber = (num) => num.toFixed(2);
+    const isEven = (num) => num % 2 === 0;
+
+    const isEmailValid = (email) => {
+      return email.includes("@") && email.includes(".");
+    };
+
+    function scopeDemo() {
+      let msg = "JavaScript Function Scope";
+      return msg;
+    }
+
+    /* UPDATED VALUES */
+    document.getElementById("upper").textContent = toUpperCase("hani");
+    document.getElementById("lower").textContent = toLowerCase("savaliya");
+    document.getElementById("number").textContent = formatNumber(12.35);
+    document.getElementById("email").textContent = isEmailValid("hani@gmail.com");
+    document.getElementById("even").textContent = isEven(10);
+    document.getElementById("scope").textContent = scopeDemo();
+  </script>
+
+</body>
+</html>

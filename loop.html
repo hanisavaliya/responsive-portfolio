@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Multiplication Tables</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #0b5ed7;
+      margin-bottom: 10px;
+    }
+
+    section {
+      margin-bottom: 35px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      text-align: center;
+      color: #0b5ed7;
+      margin-bottom: 8px;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 3px 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Multiplication Tables (1 – 10)</h1>
+    <p>JavaScript Loops Practice</p>
+  </header>
+
+  <section>
+    <h2>FOR Loop Example</h2>
+    <div class="container" id="forTables"></div>
+  </section>
+
+  <section>
+    <h2>FOR...OF Loop Example</h2>
+    <div class="container" id="forOfTables"></div>
+  </section>
+
+  <footer>
+    Day 9 – JavaScript Loops & Iteration
+  </footer>
+
+  <script>
+    window.onload = function () {
+
+      /* ---------- FOR LOOP (1–5) ---------- */
+      const forBox = document.getElementById("forTables");
+
+      for (let i = 1; i <= 5; i++) {
+        let html = `<div class="card"><h3>Table of ${i}</h3>`;
+
+        for (let j = 1; j <= 10; j++) {
+          html += `<p>${i} × ${j} = ${i * j}</p>`;
+        }
+
+        html += `</div>`;
+        forBox.innerHTML += html;
+      }
+
+      /* ---------- FOR...OF LOOP (6–10) ---------- */
+      const forOfBox = document.getElementById("forOfTables");
+      const nums = [6, 7, 8, 9, 10];
+
+      for (const n of nums) {
+        let html = `<div class="card"><h3>Table of ${n}</h3>`;
+
+        for (let j = 1; j <= 10; j++) {
+          html += `<p>${n} × ${j} = ${n * j}</p>`;
+        }
+
+        html += `</div>`;
+        forOfBox.innerHTML += html;
+      }
+    };
+  </script>
+
+</body>
+</html>
